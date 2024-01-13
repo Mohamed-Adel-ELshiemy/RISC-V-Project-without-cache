@@ -1,0 +1,126 @@
+/*
+`include "PC.v"
+`include "instruction_mem.v"
+`include "register_file.v"
+`include "sign_extander.v"
+`include "ALU.v"
+`include "control_unit_Top.v"
+`include "Data_mem.v"
+`include "PC_Adder.v"
+`include "mux.v"
+*/
+module Single_Cycle_Top(clk,rst);
+
+    input clk,rst;
+
+    wire [31:0] PC_Top,RD_Instr,RD1_Top,Imm_Ext_Top,ALUResult,ReadData,PCPlus4,RD2_Top,SrcB,Result;
+    wire       RegWrite,MemWrite,ALUSrc,ResultSrc;
+    wire [2:0]ImmSrc;
+    wire [2:0]ALUControl_Top;
+	wire [31:0] PCPlus_imm ,PCPlus4_or_imm ;
+	wire zero ,pcsrc_Top;
+	
+	 mux mux_NEXT_PC_to_PC(
+                            .a(PCPlus4),
+                            .b(PCPlus_imm),
+                            .sel(pcsrc_Top),
+                            .c(PCPlus4_or_imm)
+    );
+	
+    PC PC(
+        .clk(clk),
+        .rst(rst),
+        .PC(PC_Top),
+        .NXT_PC(PCPlus4_or_imm)
+    );
+
+    PC_Adder PC_Adder_plus4(
+					.rst(rst),
+					.clk(clk),
+                    .a(PC_Top),
+                    .b(32'd1),
+                    .c(PCPlus4)
+    );
+    
+    instruction_mem instruction_mem(
+                            .rst(rst),
+                            .A(PC_Top),
+                            .RD(RD_Instr)
+    );
+
+    register_file register_file(
+                            .clk(clk),
+                            .rst(rst),
+                            .WE3(RegWrite),
+                            .WD3(Result),
+                            .A1(RD_Instr[19:15]),
+                            .A2(RD_Instr[24:20]),
+                            .A3(RD_Instr[11:7]),
+                            .RD1(RD1_Top),
+                            .RD2(RD2_Top)
+    );
+
+    sign_extander sign_extander(
+                        .in(RD_Instr),
+                        .immsrc(ImmSrc),
+                        .imm_extand(Imm_Ext_Top)
+    );
+	
+	PC_Adder PC_Adder_imm(
+					.rst(rst),
+					.clk(clk),
+                    .a(PC_Top),
+                    .b(Imm_Ext_Top),
+                    .c(PCPlus_imm)
+    );
+
+    mux mux_Register_to_ALU(
+                            .a(RD2_Top),
+                            .b(Imm_Ext_Top),
+                            .sel(ALUSrc),
+                            .c(SrcB)
+    );
+
+    ALU ALU(
+            .A(RD1_Top),
+            .B(SrcB),
+            .Result(ALUResult),
+            .ALUcontrol(ALUControl_Top),
+            .OverFlow(),
+            .Carry(),
+            .Zero(zero),
+            .Negative()
+    );
+
+    control_unit_Top control_unit_Top(
+						    .zero(zero),
+                            .op(RD_Instr[6:0]),
+							.op5(RD_Instr[5]),
+                            .regwrite(RegWrite),
+                            .immsrc(ImmSrc),
+                            .ALUsrc(ALUSrc),
+                            .memwrite(MemWrite),
+                            .resultsrc(ResultSrc),
+                            .pcsrc(pcsrc_Top),
+                            .funct3(RD_Instr[14:12]),
+                            .funct7(RD_Instr[30]),
+                            .ALUcontrol(ALUControl_Top)
+    );
+
+    Data_mem Data_mem(
+                        .clk(clk),
+                        .rst(rst),
+                        .WE(MemWrite),
+                        .WD(RD2_Top),
+                        .A(ALUResult),
+                        .RD(ReadData)
+    );
+
+    mux mux_DataMemory_to_Register(
+                            .a(ALUResult),
+                            .b(ReadData),
+                            .sel(ResultSrc),
+                            .c(Result)
+    );
+
+endmodule

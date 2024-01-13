@@ -1,0 +1,38 @@
+
+`include "main_decoder.v"
+`include "ALU_decoder.v"
+
+module control_unit_Top(
+	input        zero,
+	input  [6:0] op,
+	input        op5,funct7,
+	input  [2:0] funct3,
+	output       pcsrc,resultsrc,memwrite,ALUsrc,regwrite,
+	output [2:0] immsrc,
+	output [2:0] ALUcontrol
+);
+
+wire [1:0] ALUop ;
+
+
+main_decoder main_decoder_DUT(
+							.zero(zero),
+							.op(op),
+							.pcsrc(pcsrc),
+							.resultsrc(resultsrc),
+							.memwrite(memwrite),
+							.ALUsrc(ALUsrc),
+							.regwrite(regwrite),
+							.immsrc(immsrc),
+							.ALUop(ALUop)
+);
+
+ALU_decoder ALU_decoder_DUT(
+							.op5(op5),
+							.funct7(funct7),
+							.funct3(funct3),
+							.ALUop(ALUop),
+							.ALUcontrol(ALUcontrol)
+);
+
+endmodule 

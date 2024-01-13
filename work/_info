@@ -1,0 +1,260 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\ITI internship\verilog\RISC_V_Project
+vALU
+!i10b 1
+Z1 !s100 VZDTa=9U[Rk]_1f]ACDUG3
+Z2 Ig?YX?nbngUX5P?XM9VXYi0
+Z3 V5UF[FKR>3CBYU[goIB;fV3
+Z4 dD:\ITI internship\verilog\RISC_V_Project
+Z5 w1692262467
+Z6 8D:/ITI internship/verilog/RISC_V_Project/ALU.v
+Z7 FD:/ITI internship/verilog/RISC_V_Project/ALU.v
+L0 2
+Z8 OV;L;10.1d;51
+r1
+!s85 0
+31
+Z9 !s108 1692395464.510000
+Z10 !s107 D:/ITI internship/verilog/RISC_V_Project/Single_Cycle_Top_Tb.v|D:/ITI internship/verilog/RISC_V_Project/Single_Cycle_Top.v|D:/ITI internship/verilog/RISC_V_Project/sign_extander.v|D:/ITI internship/verilog/RISC_V_Project/register_file.v|D:/ITI internship/verilog/RISC_V_Project/PC_Adder.v|D:/ITI internship/verilog/RISC_V_Project/PC.v|D:/ITI internship/verilog/RISC_V_Project/mux.v|D:/ITI internship/verilog/RISC_V_Project/main_decoder.v|D:/ITI internship/verilog/RISC_V_Project/instruction_mem.v|D:/ITI internship/verilog/RISC_V_Project/Data_mem.v|D:/ITI internship/verilog/RISC_V_Project/control_unit_Top.v|D:/ITI internship/verilog/RISC_V_Project/ALU_decoder.v|D:/ITI internship/verilog/RISC_V_Project/ALU.v|
+Z11 !s90 -reportprogress|300|-work|work|D:/ITI internship/verilog/RISC_V_Project/ALU.v|D:/ITI internship/verilog/RISC_V_Project/ALU_decoder.v|D:/ITI internship/verilog/RISC_V_Project/control_unit_Top.v|D:/ITI internship/verilog/RISC_V_Project/Data_mem.v|D:/ITI internship/verilog/RISC_V_Project/instruction_mem.v|D:/ITI internship/verilog/RISC_V_Project/main_decoder.v|D:/ITI internship/verilog/RISC_V_Project/mux.v|D:/ITI internship/verilog/RISC_V_Project/PC.v|D:/ITI internship/verilog/RISC_V_Project/PC_Adder.v|D:/ITI internship/verilog/RISC_V_Project/register_file.v|D:/ITI internship/verilog/RISC_V_Project/sign_extander.v|D:/ITI internship/verilog/RISC_V_Project/Single_Cycle_Top.v|D:/ITI internship/verilog/RISC_V_Project/Single_Cycle_Top_Tb.v|
+!s101 -O0
+Z12 o-work work -O0
+Z13 n@a@l@u
+vALU_decoder
+!i10b 1
+Z14 !s100 OoHS=LeUoHc_CKcJH?7Y62
+Z15 IWma;HFP4XVfbg`nIMcF<K3
+Z16 VzA=eng3=f7T_:eQZ85=;A0
+R4
+Z17 w1692270123
+Z18 8D:/ITI internship/verilog/RISC_V_Project/ALU_decoder.v
+Z19 FD:/ITI internship/verilog/RISC_V_Project/ALU_decoder.v
+L0 2
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+R12
+Z20 n@a@l@u_decoder
+vcontrol_unit_Top
+!i10b 1
+Z21 !s100 UVDJTIKL[=8Ra]40@TMHa0
+Z22 I;Cji1QZ_2?j;;G9Vn4>Tz2
+Z23 VQHLMiJz;jN<9R?JW7P35[0
+R4
+Z24 w1692273930
+Z25 8D:/ITI internship/verilog/RISC_V_Project/control_unit_Top.v
+Z26 FD:/ITI internship/verilog/RISC_V_Project/control_unit_Top.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+R12
+Z27 ncontrol_unit_@top
+vData_mem
+!i10b 1
+Z28 !s100 b=6Q?N=PhO1o3YJn86cR50
+Z29 I4hG4H;aLI5Dnl9SCV6gj?2
+Z30 VMjVg10hLh8hI5<7gmmk[?0
+R4
+Z31 w1692276095
+Z32 8D:/ITI internship/verilog/RISC_V_Project/Data_mem.v
+Z33 FD:/ITI internship/verilog/RISC_V_Project/Data_mem.v
+L0 2
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+R12
+Z34 n@data_mem
+vinstruction_mem
+!i10b 1
+Z35 !s100 L35n3jl7_<T8@5RL32`h<0
+Z36 IBGfC>>cUgQadZjHS_93e`2
+Z37 VkA_NXn6<YghfA>PDU=aAm0
+R4
+Z38 w1692380050
+Z39 8D:/ITI internship/verilog/RISC_V_Project/instruction_mem.v
+Z40 FD:/ITI internship/verilog/RISC_V_Project/instruction_mem.v
+L0 2
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+R12
+vmain_decoder
+!i10b 1
+Z41 !s100 DFnTBTjh9cJOAW;Gm4:2l3
+Z42 IdzaLDIWTSgEal57jC4n:e2
+Z43 VKhIKCQdjUIdYX7TU[l8az0
+R4
+Z44 w1692271705
+Z45 8D:/ITI internship/verilog/RISC_V_Project/main_decoder.v
+Z46 FD:/ITI internship/verilog/RISC_V_Project/main_decoder.v
+L0 2
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+R12
+vmux
+!i10b 1
+Z47 !s100 <F<`=NAd0LQKkU_]eB1O93
+Z48 I59cBcM9Ud9g9SZ8:O6H2=3
+Z49 VY0ZNB6bGcJ07H@_]G3EXn2
+R4
+Z50 w1692262753
+Z51 8D:/ITI internship/verilog/RISC_V_Project/mux.v
+Z52 FD:/ITI internship/verilog/RISC_V_Project/mux.v
+L0 2
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+R12
+vPC
+!i10b 1
+Z53 !s100 7hmO5EbXa:6=7609Nn@VD1
+Z54 I3RIWY5d_BKQIXl4gj^<bk1
+Z55 VOZQnjdWhPM[=1M`DiWzR50
+R4
+Z56 w1692302489
+Z57 8D:/ITI internship/verilog/RISC_V_Project/PC.v
+Z58 FD:/ITI internship/verilog/RISC_V_Project/PC.v
+L0 2
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+R12
+n@p@c
+vPC_Adder
+!i10b 1
+!s100 nd<GmWVRoil5jSGYoQQ1I1
+Il0nIP:D7?`^hL6NY5_JZA1
+VR3M^;ZEg1RP:PR^I8=VlO1
+R4
+w1692383340
+Z59 8D:/ITI internship/verilog/RISC_V_Project/PC_Adder.v
+Z60 FD:/ITI internship/verilog/RISC_V_Project/PC_Adder.v
+L0 2
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+R12
+Z61 n@p@c_@adder
+vregister_file
+!i10b 1
+Z62 !s100 ^kRIG^7oaGJO8eDURjDi]0
+Z63 IKT9KV1?YCYCHLj4eefNWF0
+Z64 Vg]@`>_JZ:B:CBFMJhEcTN3
+R4
+Z65 w1692371887
+Z66 8D:/ITI internship/verilog/RISC_V_Project/register_file.v
+Z67 FD:/ITI internship/verilog/RISC_V_Project/register_file.v
+L0 2
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+R12
+vsign_extander
+!i10b 1
+Z68 !s100 mTJXo:3?5Mel?KI[9_[4f3
+Z69 I63g_?R2Zf9H43AaSY@99k1
+Z70 V;hjoz9BjCBzIZNM6:;9X70
+R4
+Z71 w1692294833
+Z72 8D:/ITI internship/verilog/RISC_V_Project/sign_extander.v
+Z73 FD:/ITI internship/verilog/RISC_V_Project/sign_extander.v
+L0 2
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+R12
+vSingle_Cycle_Top
+!i10b 1
+!s100 WbR`QWlc]9AfWZV9OWBDa1
+ITR?mebe8MMX`=JGZEF0?d1
+Z74 VmlLF<egc>;h1H;4H3Z:9h0
+R4
+w1692394937
+Z75 8D:/ITI internship/verilog/RISC_V_Project/Single_Cycle_Top.v
+Z76 FD:/ITI internship/verilog/RISC_V_Project/Single_Cycle_Top.v
+L0 12
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+R12
+Z77 n@single_@cycle_@top
+vSingle_Cycle_Top_Tb
+!i10b 1
+Z78 !s100 m?773<=WD4J_QIlBDYcB>1
+Z79 IRU9h;XN1f;NaeWEZ7^2Dk1
+Z80 VM2hQfjmGPV0jYcVX058RC2
+R4
+Z81 w1692294947
+Z82 8D:/ITI internship/verilog/RISC_V_Project/Single_Cycle_Top_Tb.v
+Z83 FD:/ITI internship/verilog/RISC_V_Project/Single_Cycle_Top_Tb.v
+L0 2
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+R12
+Z84 n@single_@cycle_@top_@tb
